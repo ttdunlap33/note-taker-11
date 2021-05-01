@@ -51,7 +51,7 @@ const deleteNote = (id) =>
   });
 
 const renderActiveNote = () => {
-  console.log("RenderActiveNote");
+  // console.log("RenderActiveNote");
   hide(saveNoteBtn);
 
   if (activeNote.id) {
@@ -68,7 +68,7 @@ const renderActiveNote = () => {
 };
 
 const handleNoteSave = () => {
-  console.log("HandleNoteSave");
+  // console.log("HandleNoteSave");
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
@@ -81,7 +81,7 @@ const handleNoteSave = () => {
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {
-  console.log("HandleNoteDelete");
+  // console.log("HandleNoteDelete");
   // prevents the click listener for the list from being called when the button inside of it is clicked
   e.stopPropagation();
 
@@ -100,7 +100,7 @@ const handleNoteDelete = (e) => {
 
 // Sets the activeNote and displays it
 const handleNoteView = (e) => {
-  console.log("HandleNoteView");
+  // console.log("HandleNoteView");
   e.preventDefault();
   activeNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
   renderActiveNote();
@@ -108,7 +108,7 @@ const handleNoteView = (e) => {
 
 // Sets the activeNote to and empty object and allows the user to enter a new note
 const handleNewNoteView = (e) => {
-  console.log("HandleNewNoteView");
+  // console.log("HandleNewNoteView");
   activeNote = {};
   renderActiveNote();
 };
